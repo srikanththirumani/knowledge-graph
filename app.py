@@ -451,10 +451,14 @@ Now generate the relationships:
             print(f"Error in create_process_flow: {str(e)}")
             return None
 
-    def generate_wordcloud(self, text):
+      def generate_wordcloud(self, text):
         """Generate wordcloud visualization"""
-        wordcloud = WordCloud(width=800, height=400, 
-                             background_color='white').generate(text)
+        wordcloud = WordCloud(
+            width=800, 
+            height=400, 
+            background_color='white',
+            colormap='viridis'  # Use a named colormap directly
+        ).generate(text)
         plt.figure(figsize=(8, 5))
         plt.imshow(wordcloud, interpolation='bilinear')
         plt.axis('off')
