@@ -451,7 +451,7 @@ Now generate the relationships:
             print(f"Error in create_process_flow: {str(e)}")
             return None
 
-      def generate_wordcloud(self, text):
+    def generate_wordcloud(self, text):
         """Generate wordcloud visualization"""
         wordcloud = WordCloud(
             width=800, 
